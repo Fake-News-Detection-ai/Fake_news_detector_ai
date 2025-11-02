@@ -1,0 +1,212 @@
+✅ PRE-DEMO CHECKLIST
+=====================
+
+Use this checklist before your demo to make sure everything is ready!
+
+
+SETUP CHECKLIST
+---------------
+
+File Organization:
+☐ All files downloaded from Claude
+☐ Files organized in one folder
+☐ enhanced_fake_news_model_v2.pkl in the folder
+☐ templates folder contains index.html
+☐ Folder structure matches the guide
+
+Dependencies:
+☐ Python 3.8+ installed
+☐ pip install -r requirements.txt completed
+☐ No error messages during installation
+☐ All packages installed: Flask, scikit-learn, numpy, pandas
+
+Testing:
+☐ python app.py runs without errors
+☐ Terminal shows "Model loaded successfully"
+☐ Server starts on port 5000
+☐ Browser opens http://localhost:5000
+☐ Page loads correctly (purple gradient, white card)
+☐ "Real News Example" button works
+☐ "Fake News Example" button works
+☐ "Analyze News" button works
+☐ Results display correctly (verdict, confidence, bars)
+☐ Both TRUE and FAKE examples tested
+
+
+PRESENTATION PREP
+-----------------
+
+Before Demo Day:
+☐ Read DEMO_SCRIPT.txt completely
+☐ Practice demo 2-3 times
+☐ Time your demo (aim for 3-5 minutes)
+☐ Prepare for Q&A (review technical details)
+☐ Test on the actual presentation laptop
+☐ Ensure stable internet (if needed for setup)
+☐ Have backup plan (screenshots/video)
+
+Materials Ready:
+☐ Laptop fully charged
+☐ Charger packed (backup power)
+☐ Project folder on desktop (easy access)
+☐ Browser bookmarked to localhost:5000
+☐ Terminal/command prompt ready
+☐ Project opened in code editor (optional, for code review)
+☐ README.md available for reference
+☐ Notes/slides prepared (if using any)
+
+
+ON DEMO DAY
+-----------
+
+30 Minutes Before:
+☐ Arrive early
+☐ Set up laptop
+☐ Connect to power
+☐ Test internet connection (if needed)
+☐ Close unnecessary applications
+☐ Open terminal/command prompt
+☐ Navigate to project folder
+☐ Start the app: python app.py
+☐ Verify app is running
+☐ Open browser to http://localhost:5000
+☐ Test both examples quickly
+☐ Position windows for easy switching
+☐ Take a deep breath!
+
+During Demo:
+☐ Speak clearly and confidently
+☐ Show enthusiasm for your project
+☐ Follow DEMO_SCRIPT.txt
+☐ Test Real News Example first
+☐ Then test Fake News Example
+☐ Explain confidence scores
+☐ Highlight UI design
+☐ Mention ML techniques
+☐ Keep to time limit
+☐ Invite questions at end
+
+If Issues Occur:
+☐ Stay calm
+☐ Explain what should happen
+☐ Show code if needed
+☐ Use backup screenshots/video
+☐ Demonstrate understanding of concepts
+☐ Answer questions honestly
+
+
+TECHNICAL DETAILS READY
+-----------------------
+
+Know These:
+☐ Model: Logistic Regression
+☐ Vectorizer: TF-IDF (50,000 features)
+☐ N-grams: (1, 2) - unigrams + bigrams
+☐ Calibration: Isotonic (for probabilities)
+☐ Backend: Flask (Python)
+☐ Frontend: HTML/CSS/JavaScript
+☐ Dataset: [mention your dataset name/size]
+☐ Accuracy: [mention your accuracy if known]
+
+Can Explain:
+☐ Why you chose this model
+☐ How TF-IDF works (term frequency-inverse document frequency)
+☐ What calibration does (better probability estimates)
+☐ How the UI improves user experience
+☐ Potential real-world applications
+☐ Limitations of the model
+☐ Possible improvements/extensions
+
+
+Q&A PREPARATION
+---------------
+
+Ready to Answer:
+☐ "How accurate is your model?"
+☐ "What dataset did you use?"
+☐ "How does TF-IDF work?"
+☐ "Why Logistic Regression?"
+☐ "Can this detect all fake news?"
+☐ "How long did training take?"
+☐ "What are the limitations?"
+☐ "Could this be deployed publicly?"
+☐ "What would you add next?"
+☐ "How does it handle edge cases?"
+
+
+BACKUP PLAN
+-----------
+
+If Live Demo Fails:
+☐ Have screenshots ready
+☐ Or screen recording ready
+☐ Can walk through code
+☐ Can explain architecture
+☐ Can discuss methodology
+☐ Can show training code
+☐ Can answer technical questions
+☐ Can discuss results/metrics
+
+
+CONFIDENCE BOOSTERS
+-------------------
+
+Remember:
+☐ You built a working AI application!
+☐ Your UI is modern and professional
+☐ Your model uses advanced techniques
+☐ Your project solves a real problem
+☐ You understand your code
+☐ You're prepared
+☐ You've got this! 💪
+
+
+FINAL CHECK (5 Minutes Before)
+-------------------------------
+
+☐ App is running
+☐ Browser is open to localhost:5000
+☐ Examples work
+☐ Windows positioned correctly
+☐ Volume on (if presenting with audio)
+☐ Phone on silent
+☐ Confident smile on face 😊
+
+
+POST-DEMO
+---------
+
+After Presenting:
+☐ Thank the judges
+☐ Answer questions thoroughly
+☐ Note any feedback received
+☐ Reflect on what went well
+☐ Celebrate your hard work! 🎉
+
+
+EMERGENCY CONTACTS
+------------------
+
+Have These Ready:
+☐ Project teammate contacts (if applicable)
+☐ Instructor/advisor contact
+☐ Technical support (if available)
+
+
+---
+
+✨ YOU'RE FULLY PREPARED! ✨
+
+If you've checked all these boxes, you're ready to deliver an amazing demo!
+
+Remember:
+- Stay calm
+- Be confident
+- Show enthusiasm
+- Explain clearly
+- Answer honestly
+
+GOOD LUCK! 🚀🎉
+
+You've prepared thoroughly and your project is excellent!
+Go show them what you've built! 💯
