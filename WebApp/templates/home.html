@@ -23,13 +23,25 @@
 			<button type="submit">Predict</button>
 		</form>
 
-		{% if prediction %}
-			<div class="result {% if prediction|stringformat:'s'|lower == 'fake' %}fake{% else %}real{% endif %}">
-				<strong>Prediction:</strong> {{ prediction }}<br/>
-				{% if confidence %}
-					<strong>Confidence:</strong> {{ confidence|floatformat:2 }}
-				{% endif %}
+		{% if model_ambiguous %}
+			<div style="background:#fff3cd;border:1px solid #ffeeba;padding:10px;border-radius:6px;margin-top:12px;">
+				<strong>Warning:</strong> The loaded model looks ambiguous — it tends to predict the same numeric class for both real and fake examples in the project's dataset. Predictions may be unreliable.
 			</div>
+		{% endif %}
+
+		{% if prediction %}
+			{% if no_tokens %}
+				<div style="background:#fff0f0;border:1px solid #ffcccc;padding:10px;border-radius:6px;margin-top:12px;">
+					<strong>Note:</strong> Your input did not contain tokens recognized by the model's vocabulary, so no reliable prediction could be made. Try a longer or different input (e.g., include full sentence or headline+body).
+				</div>
+			{% else %}
+				<div class="result {% if prediction|stringformat:'s'|lower == 'fake' %}fake{% else %}real{% endif %}">
+					<strong>Prediction:</strong> {{ prediction }}<br/>
+					{% if confidence %}
+						<strong>Confidence:</strong> {{ confidence|floatformat:2 }}
+					{% endif %}
+				</div>
+			{% endif %}
 		{% endif %}
 
 		<hr>
