@@ -1,0 +1,30 @@
+"""
+Example of how to use the Baseline D inference pipeline
+"""
+
+from baselineD_inference import BaselineDInference
+
+# When your friend provides the actual model files:
+pipeline = BaselineDInference(
+    model_path='trained_models/baselineD_model.pkl',
+    vectorizer_path='trained_models/vectorizer.pkl', 
+    centroid_path='trained_models/centroids.pkl'
+)
+
+# Predict single article
+prediction, confidence = pipeline.predict_single(
+    "Breaking news: Scientists discover new breakthrough in AI technology...",
+    return_confidence=True
+)
+
+print(f"Prediction: {prediction}, Confidence: {confidence:.4f}")
+
+# Predict batch of articles
+articles = [
+    "Political summit concludes with new agreements...",
+    "Celebrity gossip and rumors from Hollywood...",
+    "Economic indicators show strong growth this quarter..."
+]
+
+predictions, features_df = pipeline.predict_batch(articles, return_features=True)
+print(features_df)
