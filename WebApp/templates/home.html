@@ -1,0 +1,50 @@
+<!doctype html>
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Fake News Detector</title>
+		<style>
+			body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 0 16px; }
+			textarea { width: 100%; height: 160px; }
+			.result { margin-top: 20px; padding: 12px; border-radius: 6px; }
+			.fake { background:#ffe6e6; border:1px solid #ffb3b3 }
+			.real { background:#e6ffe6; border:1px solid #b3ffb3 }
+		</style>
+	</head>
+	<body>
+		<h1>Fake News Detector</h1>
+		<form method="post" action="{% url 'predict' %}">
+			{% csrf_token %}
+			<label for="text">Article text (or paste headline + body):</label><br/>
+			<textarea name="text" id="text">{{ text|default_if_none:'' }}</textarea>
+			<br/>
+			<button type="submit">Predict</button>
+		</form>
+
+		{% if model_ambiguous %}
+			<div style="background:#fff3cd;border:1px solid #ffeeba;padding:10px;border-radius:6px;margin-top:12px;">
+				<strong>Warning:</strong> The loaded model looks ambiguous — it tends to predict the same numeric class for both real and fake examples in the project's dataset. Predictions may be unreliable.
+			</div>
+		{% endif %}
+
+		{% if prediction %}
+			{% if no_tokens %}
+				<div style="background:#fff0f0;border:1px solid #ffcccc;padding:10px;border-radius:6px;margin-top:12px;">
+					<strong>Note:</strong> Your input did not contain tokens recognized by the model's vocabulary, so no reliable prediction could be made. Try a longer or different input (e.g., include full sentence or headline+body).
+				</div>
+			{% else %}
+				<div class="result {% if prediction|stringformat:'s'|lower == 'fake' %}fake{% else %}real{% endif %}">
+					<strong>Prediction:</strong> {{ prediction }}<br/>
+					{% if confidence %}
+						<strong>Confidence:</strong> {{ confidence|floatformat:2 }}
+					{% endif %}
+				</div>
+			{% endif %}
+		{% endif %}
+
+		<hr>
+		<p>If your model is not found, place your trained pickle at <code>WebApp/models/fake_news_model.pkl</code> or at the project root named <code>fake_news_model.pkl</code>.</p>
+	</body>
+</html>

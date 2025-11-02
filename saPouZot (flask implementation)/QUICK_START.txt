@@ -1,0 +1,82 @@
+🚀 QUICK START GUIDE - Fake News Detector
+==========================================
+
+STEP 1: Get Your Files Ready
+-----------------------------
+Download all these files:
+✓ app.py
+✓ templates/index.html
+✓ requirements.txt
+✓ README.md
+
+AND your model file:
+✓ enhanced_fake_news_model_v2.pkl
+
+
+STEP 2: Organize Your Folder
+-----------------------------
+Put all files in one folder like this:
+
+fake-news-detector/
+├── app.py
+├── enhanced_fake_news_model_v2.pkl  ← IMPORTANT!
+├── templates/
+│   └── index.html
+├── requirements.txt
+└── README.md
+
+
+STEP 3: Install Requirements
+-----------------------------
+Open terminal/command prompt in your folder and run:
+
+    pip install -r requirements.txt
+
+(This installs Flask, scikit-learn, numpy, pandas)
+
+
+STEP 4: Run the App
+-----------------------------
+In the same terminal, run:
+
+    python app.py
+
+You'll see:
+    ✓ Model loaded successfully
+    ✓ Starting server...
+    👉 Open your browser and go to: http://localhost:5000
+
+
+STEP 5: Test It!
+-----------------------------
+1. Open browser → http://localhost:5000
+2. Click "Real News Example" button
+3. Click "Analyze News"
+4. See the result: ✓ LIKELY TRUE
+5. Try "Fake News Example" too!
+
+
+TROUBLESHOOTING
+-----------------------------
+❌ "Model file not found"
+   → Make sure enhanced_fake_news_model_v2.pkl is in the same folder as app.py
+
+❌ "Module not found" 
+   → Run: pip install Flask scikit-learn numpy pandas
+
+❌ Port already in use
+   → Change port in app.py line 93: app.run(debug=True, port=5001)
+
+
+DEMO TIPS FOR MAXIMUM MARKS 🌟
+-----------------------------
+1. Show the modern, clean UI design
+2. Test both Real and Fake examples
+3. Explain the confidence scores
+4. Show the probability breakdown bars
+5. Mention ML techniques: TF-IDF, Logistic Regression
+6. Highlight the responsive design
+7. Explain character/word count features
+
+
+That's it! Good luck with your demo! 🎉
